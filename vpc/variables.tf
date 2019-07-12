@@ -2,20 +2,22 @@ variable "cidr" {
   description = "VPC CIDR block"
 }
 
-variable "project" {}
+variable "project" {
+}
 
-variable "environment" {}
+variable "environment" {
+}
 
 variable "public_subnets" {
-  type = "list"
+  type = list(string)
 }
 
 variable "private_subnets" {
-  type = "list"
+  type = list(string)
 }
 
 variable "database_subnets" {
-  type = "list"
+  type = list(string)
 }
 
 variable "availability_zones" {
@@ -25,3 +27,4 @@ variable "availability_zones" {
 variable "aws_region" {
   default = "eu-west-1"
 }
+
